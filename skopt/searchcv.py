@@ -506,6 +506,8 @@ class BayesSearchCV(BaseSearchCV):
 
             # do the optimization for particular search space
             while n_iter > 0:
+                import gc
+                gc.collect()
                 # when n_iter < n_points points left for evaluation
                 n_points_adjusted = min(n_iter, n_points)
 
